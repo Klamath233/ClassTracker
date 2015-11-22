@@ -350,7 +350,7 @@
 				INFOPLIST_FILE = "hello-gimbal-swift/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.classAttendance;
+				PRODUCT_BUNDLE_IDENTIFIER = com.classAttendance2;
 				PRODUCT_NAME = "Class Tracker";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "hello-gimbal-swift/GimbalObjectiveCBridgingHeader.h";
@@ -372,7 +372,7 @@
 				INFOPLIST_FILE = "hello-gimbal-swift/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.classAttendance;
+				PRODUCT_BUNDLE_IDENTIFIER = com.classAttendance2;
 				PRODUCT_NAME = "Class Tracker";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "hello-gimbal-swift/GimbalObjectiveCBridgingHeader.h";

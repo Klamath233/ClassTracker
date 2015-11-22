@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Parse
+import Bolts
 
 class SignUpViewController: UIViewController {
 
@@ -18,13 +20,32 @@ class SignUpViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
+        
+        //call createUser
+        //createUser()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    //A function to create a user with the user name, id, and password
+    func createUser(){
+        let userName = nameTextField.text
+        let userPassword =  passwordTextField.text
+        let userEmailAddress = idTextField.text
+        
+        let user = PFUser()
+        user.username = userName
+        user.password = userPassword
+        user.email = userEmailAddress
+        
+        user.signUpInBackgroundWithBlock { (succeeded: Bool, error: NSError?) -> Void in
+            print("User has been saved.")
+        }
     }
     
 
@@ -39,6 +60,10 @@ class SignUpViewController: UIViewController {
             let alertView = UIAlertController(title: "Fail To Log In", message: message, preferredStyle: .Alert)
             alertView.addAction(UIAlertAction(title: "Ok", style: .Default, handler: nil))
             self.presentViewController(alertView, animated: true, completion: nil)
+        }
+        
+        else{
+             createUser()
         }
     }
     /*

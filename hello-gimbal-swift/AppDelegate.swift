@@ -1,4 +1,6 @@
 import UIKit
+import Parse
+import Bolts
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,6 +20,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.LightContent
         
         self.localNotificationPermission()
+        
+        /** Connnect To Parse */
+        // [Optional] Power your app with Local Datastore. For more info, go to
+        // https://parse.com/docs/ios_guide#localdatastore/iOS
+        Parse.enableLocalDatastore()
+        
+        // Initialize Parse.
+        Parse.setApplicationId("1Ib7wxcXubez4jpnTXfVCL1zMzG515WgR2u5kIii",
+            clientKey: "8DG0RT5m68O2guSvAE4rbpjV1kM02MTMuBnmY4Ln")
+        
+        // [Optional] Track statistics around application opens.
+        PFAnalytics.trackAppOpenedWithLaunchOptions(launchOptions)
+
         
         return true
     }
